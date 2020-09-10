@@ -23,6 +23,7 @@ public class AppUsers implements Serializable {
     private String password;
     private String email;
 
+    @MappedCollection(idColumn="userid", keyColumn="userid")
     private Set<AppUsersAuth> appUsersAuthList ;
 }
 

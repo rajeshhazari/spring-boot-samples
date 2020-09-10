@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public 	class AppUsersAuth {
     @Column("auth_user_id")
-    private long authUserId;
+    private Long authUserId;
     @Column("userid")
     private Long userid;
     private String email;
