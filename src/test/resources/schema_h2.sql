@@ -1,4 +1,4 @@
- DROP TABLE IF EXISTS APPUSERS;
+ DROP TABLE IF EXISTS APPUSERS CASCADE;
  DROP TABLE IF EXISTS appusers_auth;
  DROP TABLE IF EXISTS authorities_master;
  CREATE TABLE APPUSERS(
@@ -8,7 +8,7 @@
   email VARCHAR(100) not null unique
 );
 
-CREATE TABLE appusers_auth (
+CREATE TABLE "appusers_auth" (
  auth_user_id identity not null auto_increment PRIMARY KEY  ,
  userid BIGINT NOT NULL ,
  username text,
@@ -16,7 +16,7 @@ CREATE TABLE appusers_auth (
  role_id VARCHAR(50) NOT NULL,
  updated_time timestamp default CURRENT_TIMESTAMP
 );
-CREATE TABLE authorities_master (
+CREATE TABLE "authorities_master" (
  id identity not null auto_increment PRIMARY KEY ,
  role_id VARCHAR(50) unique,
  roledesc VARCHAR(400)

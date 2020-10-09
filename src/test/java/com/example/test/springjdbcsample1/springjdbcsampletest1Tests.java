@@ -48,7 +48,7 @@ public class springjdbcsampletest1Tests {
 
 
 		appUsersAuth.setUsername(appUsers.getUsername());
-		appUsersAuth.setUserid(appUsers.getUserid());
+		//appUsersAuth.setUserid(appUsers.getUserid());
 		appUsers = appUserRepository.save(appUsers);
 		appUsersAuth.setUserid(appUsers.getUserid());
 		appUsers = appUserRepository.save(appUsers);
